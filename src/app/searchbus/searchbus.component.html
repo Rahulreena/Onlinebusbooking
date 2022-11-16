@@ -1,0 +1,154 @@
+<div [ngClass]="seatBox?'style':''">
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 logo">
+            <img src="/busbookingpro/src/assets/redbus_india_logo.png" alt="">
+          </div>
+          <div class="col-md-6">
+            <p>
+              <span class="login"> Login</span>
+              <span class="login"> Sign Up</span>
+            </p>
+            <!-- <p>
+             <img src="../assets/img/246x0w.jpg" >
+             ,01712345678
+              01712345678,
+              
+            </p> -->
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<div class="menu">
+
+  <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-7">
+      <ul>
+        <li >Home</li>
+  
+      </ul>
+     </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="container mt-4 ">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+          <div class="row text-center">
+              <h6 class=" text-capitalize col-md-12 mb-3 text-center">dates</h6>
+            </div>
+        <div class="row mb-3 card card-body">
+  
+         <div class=" row">
+           <div class="col-md-4 text-right">
+             <p><b>Filter By</b></p>
+           </div>
+            <div class="form-group col-md-4">
+              <select name="" class="form-control form-control-sm" id="">
+                <option value="">By Bus</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+                <select name="" class="form-control form-control-sm">
+                  <option value="">By Type</option>
+                </select>
+              </div>
+         </div>
+        </div>
+        <div class="row search-result mb-5 pb-5">
+  
+          <table class="table">
+  
+            <thead>
+              <tr>
+                  <th>Bus Name</th>
+                  <th>Dept. Time</th>
+                  <th>Coach Type</th>
+                  <th>Seats Available</th>
+                  <th>Fare</th>
+                  <th></th>
+              </tr>
+            </thead>
+            
+
+            <tbody *ngFor="let bus of Busarray">
+                <tr >
+                  <td> <h6>{{bus.bus_name}}</h6></td>
+                 
+                  <td>{{bus.depart_time}}</td>
+                  <td>{{bus.coach_type}}</td>
+                  <td>{{bus.seat_available}}</td>
+                  <td>{{bus.ticket_price}}</td>
+  
+                  
+                  <!-- <ng-template #template>
+               
+                      <div class="modal-body">
+                          <button type="button" class="close pull-right" aria-label="Close" >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        
+                      </div>
+                  </ng-template> -->
+                  <!-- <td><button   class="btn btn-danger btn-sm">View Seats</button></td> -->
+                  <td><a  class="btn btn-danger btn-sm" (click)="bookBus(bus.depart_time)">Book Now</a></td>
+                </tr>
+      
+              </tbody>
+
+
+              
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="select_seat" *ngIf="seatBox" >
+    <h4>Select Your Seats</h4>
+    <input type="radio" name="seatname" (click)="seat('c1')" value="c1">C1
+    <input type="radio" name="seatname" (click)="seat('c2')" value="c2">C2
+    <input type="radio" name="seatname" (click)="seat('c3')" value="c3">C3
+    <input type="radio" name="seatname" (click)="seat('c4')" value="c4">C4
+    <input type="radio" name="seatname" (click)="seat('c5')" value="c5">C5
+    <input type="radio" name="seatname" (click)="seat('c6')" value="c6">C6
+    <input type="radio" name="seatname" (click)="seat('c7')" value="c7">C7
+    <input type="radio" name="seatname" (click)="seat('c8')" value="c8">C8
+    <input type="radio" name="seatname" (click)="seat('c9')" value="c9">C9
+    <input type="radio" name="seatname" (click)="seat('c10')" value="c10">C10
+    <input type="radio" name="seatname" (click)="seat('c11')" value="c11">C11
+    <input type="radio" name="seatname" (click)="seat('c12')" value="c12">C12
+    <input type="radio" name="seatname" (click)="seat('c13')" value="c13">C13
+<div class="amountPay" *ngIf="payBox">
+    <table>
+        <tr>
+            <th>
+                Amount Payable : 
+            </th>
+            <td>
+                ₹ 1000
+            </td>
+            <td>
+                <button (click)="clickseat()">Confirm </button>
+
+            </td>
+        </tr>
+    </table>
+</div>
+  </div>
+

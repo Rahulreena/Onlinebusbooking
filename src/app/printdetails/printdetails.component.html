@@ -1,0 +1,99 @@
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 logo">
+            <img src="/busbookingpro/src/redbus_india_logo.png" alt="">
+          </div>
+          <div class="col-md-6">
+            <p>
+              <span class="login"> Login</span>
+              <span class="login"> Sign Up</span>
+              <a href="">Home</a>
+              <a  (click)="Cancel()">Cancel Trip</a>
+            </p>
+            <!-- <p>
+             <img src="../assets/img/246x0w.jpg" >
+             ,01712345678
+              01712345678,
+              
+            </p> -->
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<div class="menu">
+
+  <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-7">
+      <ul>
+        
+  
+      </ul>
+     </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 ticket ">
+          <h6 class="text-center pt-3 pb-3 "> Online Reservation      </h6>
+          <table class="table ">
+     <thead>
+      <td class="text-capitalize">{{placeDetails.leaving}} to <span> <i class="fas fa- arrow-right"></i></span> {{placeDetails.going}}</td>
+      <td>ThursDay 10 , 2022</td>
+      <td>RedbuS.com</td>
+     </thead>  
+          </table>
+          <table class="table ps_details">
+            <tr>
+              <th>Passenger Details</th>
+              <th>Ticket Id</th>
+              <th>Seat No</th>
+              <th>Total Fare</th>
+              
+            </tr>
+            <tr>
+              <td><b>{{details.Username}}</b> <br>
+                <span>{{details.Usermobilenumber}}</span> <br>
+                <span>{{details.Email}}</span>
+              </td>
+  
+              <td>{{details._id}}</td>
+              <td >
+               <span >{{details.Seatnumber}}</span> 
+              </td>
+              <td>₹1000</td>
+            </tr>
+          </table>
+          <table class="table ps_details ">
+            <tr>
+              <th>Journey Bus Name</th>
+              <th>Reporting Time </th>
+              <th>Departure Time</th>
+              
+            </tr>
+            <tr>
+              <td>{{details.Busname}} <br>
+              <span> <em>Coach Type: </em>AC </span>
+              </td>
+              <td>Before 30 mints</td>
+              <td>{{details.Busdate}}</td>
+            </tr>
+          </table>
+      </div>
+      <div class="row">
+        <p style="color:red">** Please Bring this copy to ticket counter for collect your ticket </p>
+      </div>
+    </div>
+  </div>

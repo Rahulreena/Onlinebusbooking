@@ -1,0 +1,94 @@
+<!-- <div class="overlap"></div> -->
+
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 logo">
+            <img src="/busbookingpro/src/redbus_india_logo.png" alt="">
+          </div>
+          <div class="col-md-6">
+            <p>
+              <span class="login"> Login</span>
+              <span class="login"> Sign Up</span>
+            </p>
+            <!-- <p>
+             <img src="../assets/img/246x0w.jpg" >
+             ,01712345678
+              01712345678,
+              
+            </p> -->
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<div class="menu">
+
+  <div class="container">
+    <div class="row justify-content-center">
+     <div class="col-md-7">
+      <ul>
+        <li [routerLink]=''>Home</li>
+  
+      </ul>
+     </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+    
+
+  <div class="row justify-content-center pb-5 pt-3" >
+    <div class="col-md-8 block mt-3">
+        <div class="new">
+      
+        <div class="row">
+            
+          <div class="form-group col-md-6">
+            <label>Leaving from</label>
+            <select  required [(ngModel)]="leaving" class="form-control form-control-sm">
+              <option >Select Place</option>
+              <option >Malappuram</option>
+              <option >Kozhikode</option>
+            
+              <option >Kannur</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Going To</label>
+            <select name="going_to" [(ngModel)]="going"     class="form-control form-control-sm">
+
+              <option >Going to</option>
+              <option >Bangalore</option>
+              <option >Mumbai</option>
+              <option >Goa</option>
+             
+              <!-- <option >hehe</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="">Departing On</label>
+            <input type="date" [(ngModel)]="depart_date"  class="form-control form-control-sm"  >
+          </div>
+          
+        </div>
+        <!-- <button class="btn btn-block mt-3 btn-search btn-sm"> <i class="fas mr-2 fa-search"></i>  Search Buses</button> -->
+        <a href="searchbus" (click)="searchBus()" class="btn btn-block mt-3 btn-search btn-sm">search Buses</a>
+      
+        </div>
+    </div>
+    <div class="col-md-5 slider mt-3 ">
+      <!-- <img src="/busbookingpro/src/slider.jpg" class="img-fluid"> -->
+    </div>
+  </div>
+    </div>
